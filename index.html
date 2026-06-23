@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plutão | Portal Científico</title>
-  <meta name="description" content="Portal científico moderno sobre Plutão, sua história, órbita, superfície, atmosfera, luas e exploração pela New Horizons.">
-  <link rel="preconnect" href="https://upload.wikimedia.org">
+  <title>Plutão | Atlas de um Mundo Gelado</title>
+  <meta name="description" content="Atlas científico sobre Plutão com história, órbita, superfície, atmosfera, água, luas, New Horizons e reclassificação.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <canvas id="particle-canvas" aria-hidden="true"></canvas>
-  <div class="stars stars-a" aria-hidden="true"></div>
-  <div class="stars stars-b" aria-hidden="true"></div>
-  <div class="cosmic-vignette" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="paper-orbits" aria-hidden="true"></div>
 
-  <header class="site-header" id="topo">
+  <header class="topbar">
     <a class="brand" href="#inicio" aria-label="Ir para o início">
-      <span class="brand-mark"></span>
-      <span>Plutão</span>
+      <span class="brand-seal"></span>
+      <span>Atlas Plutão</span>
     </a>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
-      <span></span>
-      <span></span>
-      <span></span>
+    <button class="menu-button" type="button" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
     </button>
-    <nav class="main-menu" id="main-menu" aria-label="Menu principal">
+    <nav class="nav-links" aria-label="Menu principal">
       <a href="#inicio">Início</a>
       <a href="#historia">História</a>
       <a href="#orbita">Órbita</a>
@@ -38,289 +33,253 @@
   </header>
 
   <main>
-    <section class="hero section" id="inicio">
+    <section class="hero" id="inicio">
       <div class="hero-copy reveal">
-        <p class="eyebrow">Portal científico do Cinturão de Kuiper</p>
+        <p class="kicker">Cinturão de Kuiper • Arquivo científico</p>
         <h1>Plutão</h1>
-        <p class="hero-subtitle">O mundo gelado que mudou nossa visão sobre o Sistema Solar</p>
+        <p class="hero-lead">O mundo gelado que mudou nossa visão sobre o Sistema Solar.</p>
+        <p class="hero-text">Um planeta-anão pequeno, distante e cheio de contrastes: gelo duro como rocha, planícies jovens, névoas delicadas, luas irregulares e uma história que atravessa telescópios, debates e exploração espacial.</p>
         <div class="hero-actions">
-          <a class="btn primary" href="#historia">Explorar História</a>
-          <a class="btn ghost" href="#linha-do-tempo">Ver Linha do Tempo</a>
+          <a class="btn btn-filled" href="#historia">Explorar história</a>
+          <a class="btn btn-line" href="#linha-do-tempo">Ver linha do tempo</a>
         </div>
       </div>
-      <div class="hero-visual reveal" data-parallax="0.08">
-        <div class="planet-glow"></div>
+      <div class="hero-plate reveal">
+        <div class="plate-label">PLUTO / 134340</div>
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Nh-pluto-in-true-color_2x_JPEG-edit-frame.jpg" alt="Imagem de Plutão registrada pela missão New Horizons">
-        <div class="orbit-ring ring-one"></div>
-        <div class="orbit-ring ring-two"></div>
+        <div class="specimen-data">
+          <span>248 anos por órbita</span>
+          <span>-232°C em média</span>
+          <span>5 luas conhecidas</span>
+        </div>
       </div>
     </section>
 
-    <section class="section intro-grid" id="plutao">
-      <div class="section-heading reveal">
-        <p class="eyebrow">O que é Plutão</p>
-        <h2>Um planeta-anão distante, complexo e surpreendente</h2>
-        <p>Plutão é um planeta-anão localizado no Cinturão de Kuiper, uma vasta região além de Netuno formada por mundos gelados, fragmentos antigos e objetos que preservam pistas da juventude do Sistema Solar. Durante décadas ele foi visto como o limite conhecido da família planetária, um ponto distante que parecia simples demais para guardar grandes surpresas.</p>
-        <p>Hoje, Plutão é entendido como um corpo complexo: tem superfície sólida, montanhas de gelo, planícies que parecem se renovar lentamente, atmosfera fina e um sistema de luas incomum. Seu estudo ajuda os cientistas a investigar como pequenos mundos podem permanecer geologicamente interessantes mesmo sob frio extremo e luz solar muito fraca.</p>
+    <section class="section atlas-intro" id="plutao">
+      <div class="section-title reveal">
+        <p class="kicker">O que é Plutão</p>
+        <h2>Um planeta-anão com geologia, atmosfera e personalidade própria</h2>
       </div>
-      <div class="quick-facts">
-        <article class="fact-card reveal"><span>Descoberto</span><strong>1930</strong></article>
-        <article class="fact-card reveal"><span>Descobridor</span><strong>Clyde Tombaugh</strong></article>
-        <article class="fact-card reveal"><span>Classificação atual</span><strong>Planeta-anão</strong></article>
-        <article class="fact-card reveal"><span>Distância média do Sol</span><strong>5,9 bilhões de km</strong></article>
-        <article class="fact-card reveal"><span>Período orbital</span><strong>248 anos terrestres</strong></article>
-        <article class="fact-card reveal"><span>Temperatura média</span><strong>-232°C</strong></article>
-        <article class="fact-card reveal"><span>Luas conhecidas</span><strong>5</strong></article>
-        <article class="fact-card reveal"><span>Maior lua</span><strong>Caronte</strong></article>
+      <div class="intro-copy reveal">
+        <p>Plutão é um planeta-anão localizado no Cinturão de Kuiper, uma região além de Netuno formada por corpos gelados e materiais antigos. Por muito tempo, ele foi tratado como o limite simbólico do Sistema Solar conhecido, mas a ciência moderna revelou algo mais interessante: Plutão pertence a uma população inteira de mundos frios e complexos.</p>
+        <p>Mesmo pequeno, ele possui superfície sólida, montanhas de gelo de água, planícies de nitrogênio congelado, atmosfera fina e um conjunto de luas que desafia a ideia de que objetos distantes são simples ou inativos.</p>
+      </div>
+      <div class="fact-ledger">
+        <article class="fact reveal"><span>Descoberto em</span><strong>1930</strong></article>
+        <article class="fact reveal"><span>Descobridor</span><strong>Clyde Tombaugh</strong></article>
+        <article class="fact reveal"><span>Classe atual</span><strong>Planeta-anão</strong></article>
+        <article class="fact reveal"><span>Distância média</span><strong>5,9 bilhões km</strong></article>
+        <article class="fact reveal"><span>Período orbital</span><strong>248 anos</strong></article>
+        <article class="fact reveal"><span>Temperatura média</span><strong>-232°C</strong></article>
+        <article class="fact reveal"><span>Luas conhecidas</span><strong>5</strong></article>
+        <article class="fact reveal"><span>Maior lua</span><strong>Caronte</strong></article>
       </div>
     </section>
 
-    <section class="section split-section" id="historia">
-      <div class="section-heading reveal">
-        <p class="eyebrow">História interativa</p>
-        <h2>Da descoberta ao status de ícone científico</h2>
-        <p>A história de Plutão começa com uma busca paciente por um planeta ainda desconhecido, passa por mais de sete décadas como o famoso nono planeta e chega a um debate internacional que mudou a definição de planeta. Poucos objetos celestes atravessaram tantas mudanças de interpretação sem perder seu fascínio público e científico.</p>
-        <p>Cada etapa revela uma transformação na própria astronomia: primeiro, a descoberta por fotografia; depois, o avanço das medições orbitais; mais tarde, a identificação de outros mundos parecidos no Cinturão de Kuiper; por fim, a exploração direta pela New Horizons.</p>
+    <section class="section history-section" id="historia">
+      <div class="section-title reveal">
+        <p class="kicker">História interativa</p>
+        <h2>De ponto fotográfico a protagonista da astronomia moderna</h2>
       </div>
-      <div class="tabs-panel reveal">
-        <div class="tab-buttons" role="tablist" aria-label="História de Plutão">
-          <button class="tab-button active" type="button" role="tab" aria-selected="true" data-tab="descoberta">Descoberta</button>
-          <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="nono">Antigo nono planeta</button>
-          <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="reclassificacao-tab">Reclassificação</button>
-          <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="exploracao">Exploração</button>
-          <button class="tab-button" type="button" role="tab" aria-selected="false" data-tab="atualidade">Atualidade</button>
+      <div class="story-layout">
+        <div class="story-tabs reveal" role="tablist" aria-label="Fases da história de Plutão">
+          <button class="tab active" type="button" data-tab="descoberta">Descoberta</button>
+          <button class="tab" type="button" data-tab="nono">Nono planeta</button>
+          <button class="tab" type="button" data-tab="reclassificacao">Reclassificação</button>
+          <button class="tab" type="button" data-tab="exploracao">Exploração</button>
+          <button class="tab" type="button" data-tab="atualidade">Atualidade</button>
         </div>
-        <div class="tab-content">
-          <h3 id="tab-title">Descoberta</h3>
-          <p id="tab-text">Plutão foi descoberto em 1930 por Clyde Tombaugh no Observatório Lowell, no Arizona. A descoberta veio após noites de comparação entre placas fotográficas: Tombaugh procurava um pequeno ponto que se movesse contra o fundo fixo das estrelas. Esse ponto revelou um mundo frio, distante e até então invisível aos telescópios comuns.</p>
-        </div>
+        <article class="story-card reveal">
+          <p class="story-year" id="story-year">1930</p>
+          <h3 id="story-title">Descoberta</h3>
+          <p id="story-text">Plutão foi descoberto por Clyde Tombaugh no Observatório Lowell, no Arizona. Ele comparava placas fotográficas em busca de um ponto que se movesse contra o fundo das estrelas. Esse trabalho paciente revelou um corpo distante, frio e quase invisível aos telescópios da época.</p>
+        </article>
       </div>
     </section>
 
     <section class="section orbit-section" id="orbita">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Órbita</p>
-        <h2>Uma trajetória inclinada e elíptica</h2>
-        <p>A órbita de Plutão é uma das características que mais o diferenciam dos planetas principais. Ela é elíptica, ou seja, mais alongada, e também inclinada em relação ao plano onde a maioria dos planetas gira ao redor do Sol. Em certos períodos, Plutão fica mais perto do Sol que Netuno, embora as duas órbitas sejam estáveis e não levem a colisões.</p>
-        <p>Uma volta completa leva cerca de 248 anos terrestres. Isso significa que desde sua descoberta, em 1930, Plutão ainda não completou uma única órbita ao redor do Sol. A grande distância também faz com que a luz solar chegue muito enfraquecida, transformando o meio-dia plutoniano em algo parecido com um crepúsculo terrestre.</p>
+      <div class="section-title reveal">
+        <p class="kicker">Órbita</p>
+        <h2>Uma volta longa, inclinada e fora do desenho comum dos planetas</h2>
       </div>
-      <div class="orbit-stage reveal" aria-label="Animação simplificada da órbita de Plutão">
-        <svg viewBox="0 0 640 360" role="img" aria-labelledby="orbit-title">
-          <title id="orbit-title">Plutão orbitando o Sol em trajetória elíptica</title>
-          <defs>
-            <radialGradient id="sunGradient">
-              <stop offset="0%" stop-color="#fff7b1"/>
-              <stop offset="45%" stop-color="#f8b34d"/>
-              <stop offset="100%" stop-color="#e05f2d"/>
-            </radialGradient>
-          </defs>
-          <ellipse class="orbit-line" cx="330" cy="180" rx="250" ry="95"></ellipse>
-          <circle class="sun" cx="190" cy="180" r="30" fill="url(#sunGradient)"></circle>
-          <circle class="inner-orbit" cx="230" cy="180" r="58"></circle>
-          <circle class="moving-pluto" r="11">
-            <animateMotion dur="14s" repeatCount="indefinite" rotate="auto">
-              <mpath href="#pluto-path"></mpath>
-            </animateMotion>
-          </circle>
-          <path id="pluto-path" d="M 80 180 A 250 95 0 1 1 580 180 A 250 95 0 1 1 80 180" fill="none"></path>
-        </svg>
-        <div class="orbit-notes">
-          <span>Órbita alongada</span>
-          <span>Inclinação elevada</span>
-          <span>248 anos por volta</span>
+      <div class="orbit-grid">
+        <div class="orbit-copy reveal">
+          <p>A órbita de Plutão é elíptica e inclinada. Em vez de seguir um caminho quase circular e alinhado com os planetas principais, ele percorre uma trajetória mais alongada, cruzando regiões muito distantes e recebendo luz solar extremamente fraca.</p>
+          <p>Uma volta completa ao redor do Sol leva cerca de 248 anos terrestres. Desde sua descoberta em 1930, Plutão ainda não completou sequer uma órbita inteira. Essa escala de tempo reforça o quanto o Sistema Solar externo opera em ritmos quase geológicos.</p>
+        </div>
+        <div class="orbit-model reveal" aria-label="Modelo visual da órbita de Plutão">
+          <div class="sun">Sol</div>
+          <div class="ellipse ellipse-a"><span></span></div>
+          <div class="ellipse ellipse-b"></div>
+          <div class="orbit-caption">Órbita alongada • Inclinação elevada • 248 anos</div>
         </div>
       </div>
     </section>
 
     <section class="section landing-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Exploração de superfície</p>
+      <div class="section-title reveal">
+        <p class="kicker">Pouso</p>
         <h2>É possível pousar em Plutão?</h2>
-        <p>Em teoria, uma sonda poderia pousar em Plutão porque ele possui superfície sólida. Diferente de um gigante gasoso, não há uma camada atmosférica profunda que impeça o contato com o solo. O desafio real seria chegar, desacelerar, sobreviver ao ambiente e operar em uma região onde quase tudo favorece o silêncio e a imobilidade.</p>
-        <p>A distância torna a missão longa e cara; o frio exige sistemas de aquecimento confiáveis; a pouca luz solar reduz o uso de painéis solares; e a comunicação com a Terra teria atrasos de várias horas. Um pouso em Plutão seria uma das operações mais delicadas da exploração robótica do Sistema Solar.</p>
       </div>
-      <div class="glass-grid">
-        <article class="glass-card reveal">
-          <h3>Ambiente hostil</h3>
-          <p>Temperaturas próximas de -232°C exigiriam aquecimento constante, materiais resistentes à contração térmica e eletrônicos protegidos contra um ambiente onde a maioria dos mecanismos comuns falharia rapidamente.</p>
+      <div class="three-notes">
+        <article class="note reveal">
+          <span>01</span>
+          <h3>Superfície sólida</h3>
+          <p>Uma sonda poderia pousar porque Plutão não é gasoso. Ele tem solo congelado, regiões rochosas de gelo e materiais voláteis que formam planícies e relevos.</p>
         </article>
-        <article class="glass-card reveal">
+        <article class="note reveal">
+          <span>02</span>
+          <h3>Ambiente extremo</h3>
+          <p>O desafio seria sobreviver ao frio intenso, à pouca luz solar e à enorme distância. Sistemas de energia, aquecimento e navegação teriam de operar com altíssima autonomia.</p>
+        </article>
+        <article class="note reveal">
+          <span>03</span>
           <h3>Atmosfera irrespirável</h3>
-          <p>Humanos não poderiam respirar ali. A atmosfera é muito fina e composta principalmente por nitrogênio, metano e monóxido de carbono, sem oxigênio disponível e com pressão extremamente baixa.</p>
-        </article>
-        <article class="glass-card reveal">
-          <h3>Logística profunda</h3>
-          <p>Uma missão de pouso precisaria desacelerar após uma viagem de bilhões de quilômetros. Como os sinais demoram horas, a nave teria de executar grande parte da descida de forma autônoma.</p>
+          <p>Humanos não poderiam respirar lá. A atmosfera é muito fina e composta principalmente por nitrogênio, metano e monóxido de carbono.</p>
         </article>
       </div>
     </section>
 
-    <section class="section split-feature" id="agua">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Água</p>
-        <h2>Gelo rígido como rocha</h2>
-        <p>Plutão possui gelo de água, mas não água líquida exposta na superfície. Em temperaturas tão baixas, o gelo de água fica tão rígido que pode atuar como uma espécie de rocha, sustentando montanhas e estruturas elevadas. A paisagem não é formada apenas por água congelada: há também gelos de nitrogênio, metano e monóxido de carbono, que se comportam de maneira mais móvel.</p>
-        <p>Essa combinação cria uma geologia incomum. Enquanto o gelo de água forma uma base dura, gelos mais voláteis podem fluir lentamente, congelar, sublimar e redesenhar regiões da superfície. Alguns modelos sugerem que Plutão pode abrigar, ou ter abrigado no passado, um oceano subterrâneo protegido por camadas de gelo. A hipótese ainda é estudada, mas tornou Plutão ainda mais relevante para a ciência planetária.</p>
-      </div>
-      <div class="ice-panel reveal" data-parallax="0.04">
-        <span>H2O</span>
-        <div class="ice-crystals"></div>
+    <section class="section water-section" id="agua">
+      <div class="water-symbol reveal">H₂O</div>
+      <div class="section-title reveal">
+        <p class="kicker">Água</p>
+        <h2>Gelo de água rígido como pedra</h2>
+        <p>Plutão possui gelo de água, mas não água líquida exposta na superfície. Em temperaturas tão baixas, esse gelo se torna extremamente duro e pode sustentar montanhas. O gelo de água funciona quase como a rocha estrutural do planeta-anão.</p>
+        <p>Além dele, há gelos de nitrogênio, metano e monóxido de carbono. Esses materiais são mais voláteis e podem congelar, sublimar ou fluir lentamente. Alguns modelos sugerem que Plutão pode ter, ou ter tido, um oceano subterrâneo isolado sob a crosta, hipótese ainda investigada.</p>
       </div>
     </section>
 
-    <section class="section" id="superficie">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Superfície</p>
-        <h2>Montanhas, planícies e um coração congelado</h2>
-        <p>A New Horizons mostrou que Plutão não é uma esfera congelada e estática. Sua superfície apresenta regiões de idades diferentes, planícies claras quase sem crateras, áreas escuras antigas, montanhas de gelo e terrenos com formas que indicam processos geológicos lentos, porém ativos.</p>
-        <p>A região mais famosa é a Tombaugh Regio, uma grande área clara em forma de coração. Ela se tornou símbolo de Plutão porque revelou um mundo visualmente marcante e cientificamente surpreendente, com sinais de renovação superficial mesmo a bilhões de quilômetros do Sol.</p>
+    <section class="section surface-section" id="superficie">
+      <div class="section-title reveal">
+        <p class="kicker">Superfície</p>
+        <h2>Um mosaico de montanhas, crateras, planícies e coração gelado</h2>
+        <p>A New Horizons revelou que Plutão é muito mais variado do que parecia. A superfície combina áreas antigas e crateradas com planícies claras e jovens, indicando processos que remodelam lentamente o gelo.</p>
       </div>
-      <div class="surface-grid">
-        <article class="image-card reveal">
-          <div class="visual terrain-heart" role="img" aria-label="Representação da Tombaugh Regio"></div>
+      <div class="surface-cards">
+        <article class="surface-card reveal">
+          <div class="surface-art heart"></div>
           <h3>Tombaugh Regio</h3>
-          <p>A região clara em forma de coração é uma das marcas mais reconhecíveis de Plutão. Parte dela inclui Sputnik Planitia, uma planície rica em gelo de nitrogênio que parece relativamente jovem.</p>
+          <p>A região em forma de coração é o símbolo visual de Plutão. Parte dela inclui Sputnik Planitia, uma planície rica em gelo de nitrogênio.</p>
         </article>
-        <article class="image-card reveal">
-          <div class="visual terrain-mountains" role="img" aria-label="Representação de montanhas de gelo"></div>
+        <article class="surface-card reveal">
+          <div class="surface-art ridges"></div>
           <h3>Montanhas de gelo</h3>
-          <p>Blocos de gelo de água podem formar montanhas rígidas em meio a gelos mais voláteis. Algumas elevações chegam a quilômetros de altura e sugerem uma crosta resistente.</p>
+          <p>Gelo de água pode formar montanhas rígidas com quilômetros de altura, demonstrando que Plutão tem uma crosta resistente.</p>
         </article>
-        <article class="image-card reveal">
-          <div class="visual terrain-plains" role="img" aria-label="Representação de planícies congeladas"></div>
+        <article class="surface-card reveal">
+          <div class="surface-art plains"></div>
           <h3>Planícies congeladas</h3>
-          <p>Áreas lisas indicam renovação geológica e movimentos lentos de materiais gelados. A ausência de muitas crateras em certas regiões aponta para superfícies remodeladas.</p>
+          <p>Regiões lisas e claras sugerem renovação geológica, com materiais gelados se movendo em escalas lentas.</p>
         </article>
-        <article class="image-card reveal">
-          <div class="visual terrain-craters" role="img" aria-label="Representação de crateras em Plutão"></div>
-          <h3>Crateras</h3>
-          <p>Impactos preservam pistas sobre a idade e a história da superfície. Onde há mais crateras, os terrenos tendem a ser mais antigos e menos renovados.</p>
+        <article class="surface-card reveal">
+          <div class="surface-art craters"></div>
+          <h3>Crateras antigas</h3>
+          <p>As crateras registram impactos e ajudam a estimar a idade relativa das regiões da superfície.</p>
         </article>
       </div>
     </section>
 
     <section class="section atmosphere-section" id="atmosfera">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Atmosfera</p>
-        <h2>Uma névoa fina que respira com a órbita</h2>
-        <p>Plutão possui uma atmosfera tênue, composta principalmente por nitrogênio, metano e monóxido de carbono. Embora seja muito mais fina que a atmosfera terrestre, ela produz camadas de névoa azulada quando a luz solar interage com moléculas e partículas suspensas.</p>
-        <p>Essa atmosfera muda com a órbita. Quando Plutão está mais próximo do Sol, parte dos gelos da superfície sublima e alimenta uma camada gasosa maior. Quando se afasta, os gases podem voltar a congelar e cair sobre o solo, como se o planeta-anão respirasse lentamente ao longo de séculos.</p>
+      <div class="atmosphere-disc reveal">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Nh-pluto-in-true-color_2x_JPEG-edit-frame.jpg" alt="Plutão com atmosfera estilizada em tons claros">
       </div>
-      <div class="atmosphere-visual reveal">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Nh-pluto-in-true-color_2x_JPEG-edit-frame.jpg" alt="Plutão com brilho atmosférico estilizado">
-        <div class="blue-haze"></div>
+      <div class="section-title reveal">
+        <p class="kicker">Atmosfera</p>
+        <h2>Uma névoa fina que cresce e congela com a órbita</h2>
+        <p>Plutão tem uma atmosfera tênue, composta principalmente por nitrogênio, metano e monóxido de carbono. Ela é frágil, mas suficiente para formar camadas de névoa quando a luz solar interage com partículas suspensas.</p>
+        <p>Quando Plutão se aproxima do Sol, parte dos gelos superficiais sublima e alimenta a atmosfera. Quando ele se afasta, esses gases podem congelar novamente e cair sobre o solo. É uma atmosfera que parece respirar em ritmo de séculos.</p>
       </div>
     </section>
 
     <section class="section moons-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Luas</p>
-        <h2>O sistema Plutão-Caronte e suas cinco luas</h2>
-        <p>Plutão possui cinco luas conhecidas: Caronte, Nix, Hidra, Cérbero e Estige. Caronte domina o sistema por ser muito grande em comparação com Plutão; os dois corpos giram em torno de um centro de massa que fica fora de Plutão, algo raro para sistemas desse porte.</p>
-        <p>Por isso, muitos cientistas descrevem Plutão e Caronte como quase um sistema duplo. As luas menores têm formas irregulares e órbitas complexas, provavelmente ligadas a um antigo impacto que reorganizou o material ao redor de Plutão.</p>
+      <div class="section-title reveal">
+        <p class="kicker">Luas</p>
+        <h2>Plutão, Caronte e uma família orbital incomum</h2>
+        <p>Plutão possui cinco luas conhecidas: Caronte, Nix, Hidra, Cérbero e Estige. Caronte é tão grande em relação a Plutão que muitos cientistas descrevem o conjunto como quase um sistema duplo.</p>
       </div>
-      <div class="moons-orbit reveal">
-        <div class="pluto-core">Plutão</div>
-        <span class="moon charon">Caronte</span>
-        <span class="moon nix">Nix</span>
-        <span class="moon hydra">Hidra</span>
-        <span class="moon kerberos">Cérbero</span>
-        <span class="moon styx">Estige</span>
+      <div class="moon-table reveal">
+        <div><strong>Caronte</strong><span>A maior lua, quase parceira orbital de Plutão.</span></div>
+        <div><strong>Nix</strong><span>Pequena, irregular e descoberta em 2005.</span></div>
+        <div><strong>Hidra</strong><span>Uma das luas externas do sistema.</span></div>
+        <div><strong>Cérbero</strong><span>Corpo pequeno com órbita complexa.</span></div>
+        <div><strong>Estige</strong><span>A menor e uma das mais distantes luas conhecidas.</span></div>
       </div>
     </section>
 
     <section class="section mission-section" id="new-horizons">
-      <div class="section-heading reveal">
-        <p class="eyebrow">New Horizons</p>
-        <h2>A missão que transformou Plutão em paisagem</h2>
-        <p>Lançada em janeiro de 2006, a New Horizons foi construída para uma viagem rápida e precisa até os limites externos do Sistema Solar. Ela recebeu assistência gravitacional de Júpiter, ganhou velocidade e passou mais de nove anos cruzando o espaço até alcançar Plutão em julho de 2015.</p>
-        <p>Antes da missão, Plutão era visto apenas como um pequeno disco borrado mesmo nos melhores telescópios. O sobrevoo transformou esse ponto distante em paisagem: montanhas, planícies jovens, névoas atmosféricas, variações de cor e sinais de geologia ativa apareceram pela primeira vez em detalhes.</p>
-      </div>
-      <div class="mission-console reveal">
-        <div class="spacecraft" aria-hidden="true">
-          <span></span>
-        </div>
-        <div>
-          <h3>Sobrevoo histórico</h3>
-          <p>A passagem de julho de 2015 trouxe Plutão de um ponto borrado para um mundo com geologia própria, superfície dinâmica e atmosfera observável. A missão também mostrou que objetos pequenos e distantes podem ser muito mais ativos do que se imaginava.</p>
-        </div>
+      <div class="mission-card reveal">
+        <p class="kicker">New Horizons</p>
+        <h2>A sonda que transformou Plutão em paisagem</h2>
+        <p>Lançada em janeiro de 2006, a New Horizons cruzou o Sistema Solar por mais de nove anos até realizar o sobrevoo histórico de Plutão em julho de 2015. Antes dela, Plutão era apenas um pequeno disco borrado mesmo nos melhores telescópios.</p>
+        <p>As imagens revelaram montanhas de gelo, planícies jovens, variações de cor, névoas atmosféricas e uma geologia inesperadamente ativa. A missão demonstrou que mundos pequenos e distantes podem ser cientificamente ricos.</p>
       </div>
     </section>
 
     <section class="section reclass-section" id="reclassificacao">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Reclassificação</p>
-        <h2>O debate que redefiniu a palavra planeta</h2>
-        <p>Em 24 de agosto de 2006, a União Astronômica Internacional reclassificou Plutão como planeta-anão. A decisão veio após a descoberta de outros objetos semelhantes no Cinturão de Kuiper, especialmente Éris, que parecia ter tamanho comparável ao de Plutão. A astronomia precisava decidir se passaria a chamar muitos desses corpos de planetas ou se criaria uma classificação mais precisa.</p>
-        <p>O critério decisivo foi a capacidade de limpar a vizinhança orbital. Plutão orbita o Sol e tem forma arredondada, mas compartilha sua região com muitos objetos gelados. A mudança foi científica, mas também cultural: ela não diminuiu Plutão, apenas revelou que ele pertence a uma família maior de mundos distantes.</p>
+      <div class="section-title reveal">
+        <p class="kicker">Reclassificação</p>
+        <h2>O debate que mudou a definição de planeta</h2>
+        <p>Em 24 de agosto de 2006, a União Astronômica Internacional reclassificou Plutão como planeta-anão. A decisão ocorreu após a descoberta de outros objetos semelhantes no Cinturão de Kuiper, especialmente Éris.</p>
+        <p>Plutão orbita o Sol e tem forma arredondada, mas não limpa a vizinhança de sua órbita. Ele compartilha sua região com muitos outros corpos gelados. A mudança não diminuiu sua importância; apenas colocou Plutão dentro de uma família maior de mundos distantes.</p>
       </div>
-      <div class="criteria-grid">
-        <article class="glass-card reveal">
-          <h3>Orbita o Sol</h3>
-          <p>Plutão orbita diretamente o Sol, como os planetas principais, e não é satélite de outro planeta.</p>
-        </article>
-        <article class="glass-card reveal">
-          <h3>Forma arredondada</h3>
-          <p>Sua gravidade é suficiente para dar ao corpo uma forma aproximadamente esférica, sinal de equilíbrio hidrostático.</p>
-        </article>
-        <article class="glass-card reveal">
-          <h3>Não domina a órbita</h3>
-          <p>Ele compartilha sua região com outros objetos do Cinturão de Kuiper, por isso não atende ao critério orbital aplicado aos planetas principais.</p>
-        </article>
+      <div class="criteria">
+        <article class="criterion reveal"><strong>Orbita o Sol</strong><span>Atende ao primeiro critério planetário.</span></article>
+        <article class="criterion reveal"><strong>É arredondado</strong><span>Sua gravidade molda o corpo em equilíbrio.</span></article>
+        <article class="criterion reveal"><strong>Compartilha a órbita</strong><span>Não domina sua vizinhança orbital.</span></article>
       </div>
     </section>
 
     <section class="section timeline-section" id="linha-do-tempo">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Linha do tempo</p>
-        <h2>Marcos da exploração e classificação</h2>
+      <div class="section-title reveal">
+        <p class="kicker">Linha do tempo</p>
+        <h2>Marcos essenciais da história de Plutão</h2>
       </div>
       <div class="timeline">
-        <article class="timeline-item reveal"><time>1930</time><p>Clyde Tombaugh identifica Plutão no Observatório Lowell, comparando placas fotográficas em busca de um ponto que mudasse de posição entre as estrelas.</p></article>
-        <article class="timeline-item reveal"><time>1978</time><p>James Christy descobre Caronte, revelando que Plutão não estava sozinho e permitindo estimativas muito melhores de sua massa.</p></article>
-        <article class="timeline-item reveal"><time>2005</time><p>A descoberta de Éris intensifica o debate sobre quantos planetas o Sistema Solar teria se objetos semelhantes a Plutão recebessem a mesma classificação.</p></article>
-        <article class="timeline-item reveal"><time>2006</time><p>A União Astronômica Internacional aprova uma nova definição de planeta e Plutão passa a ser classificado como planeta-anão.</p></article>
-        <article class="timeline-item reveal"><time>2006</time><p>A New Horizons é lançada com a missão de realizar o primeiro reconhecimento direto de Plutão e de outros objetos do Cinturão de Kuiper.</p></article>
-        <article class="timeline-item reveal"><time>2015</time><p>A sonda realiza o sobrevoo histórico, enviando imagens que revelam a Tombaugh Regio, montanhas de gelo e uma atmosfera em camadas.</p></article>
-        <article class="timeline-item reveal"><time>Atualidade</time><p>Plutão segue sendo estudado como peça-chave para entender mundos gelados, atmosferas tênues e a formação das regiões externas do Sistema Solar.</p></article>
+        <article class="time-item reveal"><time>1930</time><p>Clyde Tombaugh descobre Plutão ao comparar placas fotográficas no Observatório Lowell.</p></article>
+        <article class="time-item reveal"><time>1978</time><p>James Christy descobre Caronte, permitindo estimativas melhores da massa do sistema.</p></article>
+        <article class="time-item reveal"><time>2005</time><p>A descoberta de Éris intensifica o debate sobre o conceito de planeta.</p></article>
+        <article class="time-item reveal"><time>2006</time><p>Plutão é reclassificado como planeta-anão pela União Astronômica Internacional.</p></article>
+        <article class="time-item reveal"><time>2006</time><p>A New Horizons é lançada rumo ao Sistema Solar externo.</p></article>
+        <article class="time-item reveal"><time>2015</time><p>A sonda realiza o primeiro sobrevoo de Plutão e envia imagens detalhadas.</p></article>
+        <article class="time-item reveal"><time>Hoje</time><p>Plutão segue sendo estudado como chave para entender mundos gelados e distantes.</p></article>
       </div>
     </section>
 
-    <section class="section" id="curiosidades">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Curiosidades</p>
-        <h2>Detalhes que tornam Plutão inesquecível</h2>
+    <section class="section curiosity-section" id="curiosidades">
+      <div class="section-title reveal">
+        <p class="kicker">Curiosidades</p>
+        <h2>Detalhes que tornam Plutão memorável</h2>
       </div>
       <div class="curiosity-grid">
-        <article class="curiosity-card reveal"><strong>248 anos</strong><span>Um ano em Plutão dura 248 anos terrestres.</span></article>
-        <article class="curiosity-card reveal"><strong>6,4 dias</strong><span>Um dia dura cerca de 6,4 dias terrestres.</span></article>
-        <article class="curiosity-card reveal"><strong>Menor</strong><span>Plutão é menor que a Lua da Terra.</span></article>
-        <article class="curiosity-card reveal"><strong>Luz fraca</strong><span>A luz solar lá é muito mais tênue.</span></article>
-        <article class="curiosity-card reveal"><strong>Coração</strong><span>Possui uma região clara em forma de coração.</span></article>
-        <article class="curiosity-card reveal"><strong>9 anos</strong><span>A New Horizons levou mais de 9 anos para chegar.</span></article>
+        <article class="curiosity reveal"><strong>248 anos</strong><span>Um ano em Plutão dura 248 anos terrestres.</span></article>
+        <article class="curiosity reveal"><strong>6,4 dias</strong><span>Um dia dura cerca de 6,4 dias terrestres.</span></article>
+        <article class="curiosity reveal"><strong>Menor que a Lua</strong><span>Plutão é menor que a Lua da Terra.</span></article>
+        <article class="curiosity reveal"><strong>Luz fraca</strong><span>O Sol parece muito menor e menos intenso visto de lá.</span></article>
+        <article class="curiosity reveal"><strong>Coração gelado</strong><span>A Tombaugh Regio se tornou sua marca visual mais famosa.</span></article>
+        <article class="curiosity reveal"><strong>9 anos</strong><span>A New Horizons levou mais de nove anos para chegar.</span></article>
       </div>
     </section>
 
     <section class="section gallery-section">
-      <div class="section-heading reveal">
-        <p class="eyebrow">Galeria</p>
-        <h2>Arquivo visual do mundo gelado</h2>
+      <div class="section-title reveal">
+        <p class="kicker">Galeria</p>
+        <h2>Pranchas visuais do atlas</h2>
       </div>
-      <div class="gallery-grid">
-        <figure class="gallery-item reveal pluto-img"><figcaption>Plutão</figcaption></figure>
-        <figure class="gallery-item reveal ice-img"><figcaption>Superfície gelada</figcaption></figure>
-        <figure class="gallery-item reveal probe-img"><figcaption>New Horizons</figcaption></figure>
-        <figure class="gallery-item reveal orbit-img"><figcaption>Órbita elíptica</figcaption></figure>
-        <figure class="gallery-item reveal charon-img"><figcaption>Plutão e Caronte</figcaption></figure>
-        <figure class="gallery-item reveal kuiper-img"><figcaption>Cinturão de Kuiper</figcaption></figure>
-        <figure class="gallery-item reveal haze-img"><figcaption>Atmosfera azulada</figcaption></figure>
+      <div class="gallery">
+        <figure class="gallery-tile pluto-photo reveal"><figcaption>Plutão em cor realçada</figcaption></figure>
+        <figure class="gallery-tile frost reveal"><figcaption>Superfície gelada</figcaption></figure>
+        <figure class="gallery-tile probe reveal"><figcaption>New Horizons</figcaption></figure>
+        <figure class="gallery-tile orbit reveal"><figcaption>Órbita elíptica</figcaption></figure>
+        <figure class="gallery-tile charon reveal"><figcaption>Plutão e Caronte</figcaption></figure>
+        <figure class="gallery-tile kuiper reveal"><figcaption>Cinturão de Kuiper</figcaption></figure>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>Portal Plutão - ciência planetária, exploração espacial e Cinturão de Kuiper.</p>
-    <a href="#inicio">Voltar ao topo</a>
+  <footer class="footer">
+    <span>Atlas Plutão • Portal educativo</span>
+    <a href="#inicio">Voltar ao início</a>
   </footer>
 
   <script src="script.js"></script>
