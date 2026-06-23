@@ -944,6 +944,42 @@ p {
   font-weight: 900;
 }
 
+.credits-section {
+  width: min(1180px, calc(100% - 2rem));
+  margin: 0 auto clamp(3rem, 7vw, 5rem);
+  padding: clamp(1.4rem, 4vw, 2.4rem);
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(320px, 1fr);
+  gap: clamp(1.2rem, 4vw, 2rem);
+  align-items: center;
+  border: 1px solid rgba(20, 63, 90, 0.18);
+  border-left: 8px solid var(--rust);
+  background:
+    linear-gradient(135deg, rgba(247, 253, 255, 0.92), rgba(207, 231, 238, 0.62)),
+    var(--paper-soft);
+  box-shadow: var(--shadow);
+}
+
+.credits-heading h2 {
+  margin-bottom: 0;
+  font-size: clamp(1.8rem, 4vw, 3.4rem);
+}
+
+.student-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.8rem;
+}
+
+.student-list span {
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(20, 63, 90, 0.18);
+  background: rgba(232, 247, 251, 0.72);
+  color: var(--umber);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-weight: 900;
+}
+
 .pluto-photo {
   grid-column: span 2;
   background-image: url("https://upload.wikimedia.org/wikipedia/commons/2/2a/Nh-pluto-in-true-color_2x_JPEG-edit-frame.jpg");
@@ -1049,7 +1085,8 @@ p {
   .three-notes,
   .criteria,
   .curiosity-grid,
-  .gallery {
+  .gallery,
+  .credits-section {
     grid-template-columns: 1fr;
   }
 
@@ -1131,7 +1168,8 @@ p {
 
   .fact-ledger,
   .surface-cards,
-  .story-tabs {
+  .story-tabs,
+  .student-list {
     grid-template-columns: 1fr;
   }
 
